@@ -61,6 +61,7 @@ print(r1 == r2)
 print(r1 == 100)
 print(r1 < r2)
 r1.width = -100
+
 print(r1.width)
 
 
