@@ -1,3 +1,10 @@
+from datetime import datetime
+
+
+
+
+
+
 def my_func(a=1, b=2, c=3):
     print(f"a={a}, b={b}, c={c}")
 
@@ -271,6 +278,27 @@ def cal_hi_lo_avg(*args, log_to_console=False):
 
 is_debug = True
 av = cal_hi_lo_avg(1, 2, 3, 4, 5, log_to_console=is_debug)
+
+#  print(datetime.utcnow())
+
+
+def log(msg, *, dt=datetime.utcnow()):
+    print('{0}, {1}'.format(dt, msg))
+
+
+log('message 1')
+
+
+def add_item(name, quantity, unit, grocery_list):
+    grocery_list.append("{0} ({1} {2})".format(name, quantity, unit))
+    return grocery_list
+
+
+store1 = []
+store2 = []
+print(add_item('banana', 2, 'units', store1))
+print(add_item('apple', 3, 'units', store2))
+
 
 if __name__ == '__main__':
     print('')
